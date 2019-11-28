@@ -1,4 +1,4 @@
-package com.rest.service.OnlineOrders;
+package com.rest.service.OnlineOrders.Exception;
 
 public class OnlineOrdersException extends Exception{
 	

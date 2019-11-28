@@ -1,4 +1,4 @@
-package com.rest.service.OnlineOrders;
+package com.rest.service.OnlineOrders.VO;
 
 import java.sql.Date;
 
