@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
                      "com.rest.servie.Controller",
                      "com.rest.servie.Exception"})*/
 @Configuration
+@EnableEurekaClient
 public class OnlineOrdersApplication {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(OnlineOrdersApplication.class);

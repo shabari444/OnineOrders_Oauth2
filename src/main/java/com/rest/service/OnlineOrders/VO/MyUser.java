@@ -4,13 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
 
 
 @Entity
+@Data
+@Table(name = "MY_USER")
 public class MyUser {
 	
-@Id@GeneratedValue(strategy=GenerationType.IDENTITY)
-private String userID;
+@Id@GeneratedValue(strategy=GenerationType.AUTO)
+private Long userID;
 
 private String userName;
 
@@ -26,11 +31,11 @@ private String role;
 
 private String password;
 
-public String getUserID() {
+public Long getUserID() {
 	return userID;
 }
 
-public void setUserID(String userID) {
+public void setUserID(Long userID) {
 	this.userID = userID;
 }
 
@@ -42,13 +47,6 @@ public void setPassword(String password) {
 	this.password = password;
 }
 
-public String getuserID() {
-	return userID;
-}
-
-public void setuserID(String userID) {
-	this.userID = userID;
-}
 
 public String getRole() {
 	return role;

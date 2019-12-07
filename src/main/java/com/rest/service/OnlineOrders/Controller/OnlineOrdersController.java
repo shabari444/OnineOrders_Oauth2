@@ -48,7 +48,7 @@ public class OnlineOrdersController extends ResourceServerConfigurerAdapter{
 		return "Working";
 	}
 	
-	@GetMapping("/getOrderById{id}")
+	@GetMapping("/getOrderById/{id}")
 	public Optional<OnlineOrder> getOrderById(@PathVariable Long id) throws OnlineOrdersException {
 		LOG.info("Fetching the details with order id "+id);
 		Optional<OnlineOrder> order = null;
