@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import com.rest.service.OnlineOrders.VO.OnlineOrder;
 
 import lombok.extern.slf4j.Slf4j;
 
+@RefreshScope
 @RestController @Slf4j
 public class OnlineOrdersController extends ResourceServerConfigurerAdapter{
 	
